@@ -6,7 +6,27 @@ public class Coffee extends Drink {
 	private int chocolateGr;
 	private int creamMl;
 
+	public void setCoffeeGr(int coffeeGr) {
+		this.coffeeGr = coffeeGr;
+	}
+
+	public void setMilkMl(int milkMl) {
+		this.milkMl = milkMl;
+	}
+
+	public void setChocolateGr(int chocolateGr) {
+		this.chocolateGr = chocolateGr;
+	}
+
+	public void setCreamMl(int creamMl) {
+		this.creamMl = creamMl;
+	}
+
 	public Coffee() {
+	}
+	
+	public Coffee(String name){
+		this.name = name;
 	}
 
 	public Coffee(String name, int waterMl, int coffeeGr, int milkMl,

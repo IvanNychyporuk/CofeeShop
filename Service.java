@@ -14,8 +14,19 @@ public class Service {
 	}
 	
 	void fillTestForDemo (){
-		addProduct(new Coffee("Black coffee", 100, 7, 0, 0, 0, 7));
-		addProduct(new Coffee("Coffee with milk", 100, 7, 100, 0, 0, 14));
+		addProduct(new Coffee("Black coffee"));
+		((Coffee) menu[0][0]).setCoffeeGr(7);
+		((Coffee) menu[0][0]).setWaterMl(100);
+		((Coffee) menu[0][0]).setSugarGr(7);
+		((Coffee) menu[0][0]).calculatePrice();
+				
+		addProduct(new Coffee("Coffee with milk"));
+		((Coffee) menu[0][1]).setWaterMl(100);
+		((Coffee) menu[0][1]).setCoffeeGr(7);
+		((Coffee) menu[0][1]).setSugarGr(14);
+		((Coffee) menu[0][1]).setMilkMl(100);
+		((Coffee) menu[0][1]).calculatePrice();
+		
 		addProduct(new Tea("Black tea"));
 		addProduct(new Tea("Black bergamot"));
 		((Tea) menu[1][1]).setBergamot(true);

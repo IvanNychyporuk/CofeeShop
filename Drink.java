@@ -6,6 +6,12 @@ public abstract class Drink extends Product{
 	protected int sugarGr; // quantity of sugar grammes
 	
 	
+	public void setWaterMl(int waterMl) {
+		this.waterMl = waterMl;
+	}
+	public void setSugarGr(int sugarGr) {
+		this.sugarGr = sugarGr;
+	}
 	public Drink() {
 	}
 	protected Drink(String name, int waterMl, int sugarGr, double price){
