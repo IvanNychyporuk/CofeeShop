@@ -32,17 +32,22 @@ public class Tea extends Drink {
 	}
 	
 	public void printForMenu () {
-		System.out.print(name + "            tea, sugar");
+		String ingridients = "tea, sugar";
+		
 		if (bergamot) {
-			System.out.print(", bergamot");
+			ingridients +=", bergamot";
+			
 		}
 		if (mint) {
-			System.out.print(", mint");
+			ingridients +=", mint";
+			
 		}
 		if (lemon) {
-			System.out.print(", lemon");
+			ingridients +=", lemon";
 		}
-		System.out.println("             " + price + "$");
+		
+		System.out.printf("%-18s%-46s%s",name,ingridients,price+"$");
+		System.out.println();
 	}
 	
 	public boolean isBergamot() {

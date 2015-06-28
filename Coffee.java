@@ -50,17 +50,23 @@ public class Coffee extends Drink {
 	}
 	
 	public void printForMenu (){
-		System.out.print(name + "            coffee, sugar");
+		String ingridients = "coffee(" + coffeeGr+"gr)," + "sugar";
+		
+		
+
 		if (milkMl != 0) {
-			System.out.print(", milk ");
-		}
+			ingridients +=",milk(" + milkMl + "ml)";
+			}
 		if (chocolateGr != 0) {
-			System.out.print(", chocolate ");
+			ingridients +=",chocolate(" + chocolateGr + "g)";
+			
 		}
 		if (creamMl != 0) {
-			System.out.println(", cream ");
+			ingridients +=",cream(" + creamMl + "ml)";
 		}
-		System.out.println("             " + price + "$");
+		
+		System.out.printf("%-18s%-46s%s",name,ingridients,price+"$");
+		System.out.println();
 	}
 
 	public void calculatePrice() {

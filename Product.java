@@ -15,8 +15,9 @@ public class Product {
 	}
 	
 	public void printForMenu () {
-		System.out.println(name + "                                            " + price + "$");
-//		System.out.printf("%s\t %s\t", name, price+"$");
+
+		System.out.printf("%-64s%s", name, price+"$");
+		System.out.println();
 		
 	}
 	
